@@ -53,9 +53,11 @@ var renderActiveNote = function() {
 var handleNoteSave = function() {
   var newNote = {
     title: $noteTitle.val(),
-    text: $noteText.val()
-  };
+    text: $noteText.val(),
+    id: Date.now()
 
+  };
+console.log(newNote)
   saveNote(newNote).then(function(data) {
     getAndRenderNotes();
     renderActiveNote();
@@ -63,8 +65,11 @@ var handleNoteSave = function() {
 };
 
 // Delete the clicked note
+// Need to add an id???
 var handleNoteDelete = function(event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
+  /////////////////// ERROR IN CODE BELOW. DO NOT FORGET BRUH///////////////////
+  id: Date.now();
   event.stopPropagation();
 
   var note = $(this)
