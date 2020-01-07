@@ -5,9 +5,6 @@ let db = require('./db/db.json')
 let bodyParser = require('body-parser')
 app.use(express.static('public'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-
 app.get('/notes', function (req, res) {
     res.sendFile(path.join(__dirname, './public/notes.html'))
 
@@ -23,7 +20,7 @@ app.post('/api/notes', function (req, res) {
     req.body
     console.log(req.body)
     db.push(req.body);
-    res.status(200);
+    res.status(200).end();
 
 })
 

@@ -17,10 +17,18 @@ var getNotes = function() {
 
 // A function for saving a note to the db
 var saveNote = function(note) {
+  console.log(note)
   return $.ajax({
+    
     url: "/api/notes",
     data: note,
-    method: "POST"
+    method: "POST",
+    contentType: "application/json; charset=utf-8",
+    complete: function(response){
+      saveNoteSuccess()
+      console.log('saveNoteSuccess');
+      console.log(response)
+    }
   });
 };
 
@@ -57,14 +65,24 @@ var handleNoteSave = function() {
     id: Date.now()
 
   };
-console.log(newNote)
-  saveNote(newNote).then(function(data) {
-    getAndRenderNotes();
-    renderActiveNote();
-  });
+
+  let jsonNote = JSON.stringify(newNote) 
+
+// console.log(jsonNote)
+  saveNote(jsonNote)
+  // .then(function(data) {
+  //   getAndRenderNotes();
+  //   renderActiveNote();
+  // });
 };
 
-// Delete the clicked note
+function saveNoteSuccess() {
+  getAndRenderNotes();
+  renderActiveNote();
+
+}
+
+// Delete the note
 // Need to add an id???
 var handleNoteDelete = function(event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
