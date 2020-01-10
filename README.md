@@ -1,13 +1,9 @@
 
-
-
 ## Installation
 
 Package Manager [pip](ttps://registry.npmjs.org/accepts/-/accepts-1.3.7.tg) to install foobar.
 
-```bash
-pip install foobar
-```
+
 
 ## Usage
 
@@ -16,4 +12,4 @@ Created an application that can be used to write, save, and delete notes. This a
 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[The Unlicense]

@@ -23,6 +23,7 @@ app.post('/api/notes', function (req, res) {
     res.status(200).end();
 
 })
+/////////////////
 ////work on the function part
 app.delete('/api/notes/:id', function (req, res) {
     var id = req.param("id");
