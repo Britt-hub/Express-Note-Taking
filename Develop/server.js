@@ -26,21 +26,16 @@ app.post('/api/notes', function (req, res) {
 /////////////////
 ////work on the function part
 app.delete('/api/notes/:id', function (req, res) {
-    var id = req.param("id");
+    db = db.filter(function(note){
+        if(req.params.id == note.id) {
+            return false
+        } else {
+            return true 
+        }
+    })
+    res.status(200).end();
 
-    activeNote.remove({
-            _id: id 
-        }, function(err){
-            if (err) {
-                console.log(err)
-            }
-            else {
-                res.send("Removed");
-            }
-        });
-}
-
-)
+})
 
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, './public/index.html'))

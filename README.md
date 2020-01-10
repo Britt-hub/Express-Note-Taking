@@ -1,7 +1,7 @@
 
 ## Installation
 
-Package Manager [pip](ttps://registry.npmjs.org/accepts/-/accepts-1.3.7.tg) to install foobar.
+Package Manager [pip](https://registry.npmjs.org/accepts/-/accepts-1.3.7.tg).
 
 
 
