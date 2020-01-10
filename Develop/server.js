@@ -23,11 +23,23 @@ app.post('/api/notes', function (req, res) {
     res.status(200).end();
 
 })
-
+////work on the function part
 app.delete('/api/notes/:id', function (req, res) {
-    res.sendFile(path.join(__dirname, './public/notes.html'))
+    var id = req.param("id");
 
-})
+    activeNote.remove({
+            _id: id 
+        }, function(err){
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send("Removed");
+            }
+        });
+}
+
+)
 
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, './public/index.html'))
