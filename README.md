@@ -1,14 +1,24 @@
+# Note Taker
+
+## Overview
+
+This is an interface that makes it easy for business owner or employees to view and interact with information statored in the database I've created. 
+
+![Note Taker](notetaker.png)
+
 
 ## Installation
 
-Package Manager [pip](https://registry.npmjs.org/accepts/-/accepts-1.3.7.tg).
+Inquirer Package Manager [pip] (https://www.npmjs.com/package/inquirer/v/0.2.3)
 
 
+HTTPS:
+$ git clone https://britt-hub.github.io/MySQLEmployee-Tracker/
 
-## Usage
+## Built With
 
-Created an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
-
+Node.js JavaScript runtime
+MySql - Data Base
 
 
 ## License
