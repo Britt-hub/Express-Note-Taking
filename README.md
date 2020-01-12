@@ -2,7 +2,9 @@
 
 ## Overview
 
-This is an interface that makes it easy for business owner or employees to view and interact with information statored in the database I've created. 
+An application that can be used to write, save, and delete notes. 
+
+User can keep track of a lot of information. When you forget or unable to recall something important you will be able to write it down and save it for a later date. Being able to take persistent notes allows users to have written information available when needed.
 
 ![Note Taker](notetaker.png)
 
