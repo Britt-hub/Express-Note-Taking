@@ -8,7 +8,10 @@ app.use(bodyParser.json());
 app.get('/notes', function (req, res) {
     res.sendFile(path.join(__dirname, './public/notes.html'))
 
+
 })
+// for heroku 
+const PORT = process.env.PORT || 3000;
 
 app.get('/api/notes', function (req, res) {
     res.json(db)
@@ -42,8 +45,8 @@ app.get('*', function (req, res) {
 
 })
 
-app.listen(3000, function () {
-    console.log('server is running on port 3000');
+app.listen(PORT, function () {
+    console.log(`server is running on port ${PORT}`);
 })
 
 
