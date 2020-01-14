@@ -8,8 +8,6 @@ User can keep track of a lot of information. When you forget or unable to recall
 
 ![Note Taker](notetaker.png)
 
-![Note Taker](img.jpg)
-
 
 
 ## Installation
