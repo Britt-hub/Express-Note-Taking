@@ -8,6 +8,9 @@ User can keep track of a lot of information. When you forget or unable to recall
 
 ![Note Taker](notetaker.png)
 
+![Note Taker](img.jpg)
+
+
 
 ## Installation
 
@@ -19,8 +22,11 @@ $ git clone https://britt-hub.github.io/MySQLEmployee-Tracker/
 
 ## Built With
 
-Node.js JavaScript runtime
-MySql - Data Base
+Express.js
+Node.js
+JavaScript
+HTML
+CSS
 
 
 ## License
